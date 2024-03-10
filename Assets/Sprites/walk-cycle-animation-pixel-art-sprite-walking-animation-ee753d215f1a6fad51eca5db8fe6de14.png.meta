@@ -113,9 +113,9 @@ TextureImporter:
       name: walk-cycle-animation-pixel-art-sprite-walking-animation-ee753d215f1a6fad51eca5db8fe6de14_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 108
         y: 0
-        width: 320
+        width: 244
         height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -134,9 +134,9 @@ TextureImporter:
       name: walk-cycle-animation-pixel-art-sprite-walking-animation-ee753d215f1a6fad51eca5db8fe6de14_1
       rect:
         serializedVersion: 2
-        x: 320
+        x: 408
         y: 0
-        width: 320
+        width: 244
         height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,9 +155,9 @@ TextureImporter:
       name: walk-cycle-animation-pixel-art-sprite-walking-animation-ee753d215f1a6fad51eca5db8fe6de14_2
       rect:
         serializedVersion: 2
-        x: 640
+        x: 708
         y: 0
-        width: 320
+        width: 244
         height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -176,9 +176,9 @@ TextureImporter:
       name: walk-cycle-animation-pixel-art-sprite-walking-animation-ee753d215f1a6fad51eca5db8fe6de14_3
       rect:
         serializedVersion: 2
-        x: 960
+        x: 1008
         y: 0
-        width: 320
+        width: 244
         height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -197,9 +197,9 @@ TextureImporter:
       name: walk-cycle-animation-pixel-art-sprite-walking-animation-ee753d215f1a6fad51eca5db8fe6de14_4
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1308
         y: 0
-        width: 320
+        width: 244
         height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
