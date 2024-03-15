@@ -10,6 +10,7 @@ public class CharacterScript : MonoBehaviour
     public float acceleration;
     
     public Rigidbody2D myRb;
+    public Animator anim;
     public float jumpForce;
     public bool isGrounded;
     
@@ -23,6 +24,7 @@ public class CharacterScript : MonoBehaviour
     {
         Debug.Log("Start");
         myRb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,17 @@ public class CharacterScript : MonoBehaviour
         {
             myRb.AddForce(new Vector2(acceleration * Input.GetAxis("Horizontal"), 0), ForceMode2D.Force);
         }
+        
+        // flip
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            anim.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            anim.transform.localScale = new Vector3(1, 1, 1);
+        }
+        // end flip
         
         //JUMP CODE
         if (isGrounded == true && Input.GetButtonDown("Jump")) // if the player is grounded and the jump button is pressed
@@ -45,6 +58,18 @@ public class CharacterScript : MonoBehaviour
             myRb.AddForce(new Vector2(0, secondaryJumpForce), ForceMode2D.Force); //while the jump button is held, add a force in the y direction
         }
         //END JUMP CODE
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        Debug.Log("OnCollisionStay2D");
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        Debug.Log("OnCollisionExit2D");
+        isGrounded = false;
     }
 
     private void OnTriggerStay2D(Collider2D other)
