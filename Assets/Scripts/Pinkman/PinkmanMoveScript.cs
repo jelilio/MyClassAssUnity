@@ -8,6 +8,8 @@ namespace Pinkman
 {
     public class PinkmanMoveScript : MonoBehaviour
     {
+        private float horizontalInput;
+        
         public float maxSpeed;
         public float acceleration;
     
@@ -22,20 +24,19 @@ namespace Pinkman
         public bool secondaryJump;
         private static readonly int Speed = Animator.StringToHash("xSpeed");
         private static readonly int JumpSpeed = Animator.StringToHash("ySpeed");
+        private static readonly int IsJumping = Animator.StringToHash("isJumping");
         
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             myRb = GetComponent<Rigidbody2D>();
             anim = GetComponentInChildren<Animator>();
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            // to transit animation between idle and run
-            anim.SetFloat(Speed, Mathf.Abs(myRb.velocity.x));
-            anim.SetFloat(JumpSpeed, Mathf.Abs(myRb.velocity.y));
+            horizontalInput = Input.GetAxis("Horizontal");
             
             // flip
             Flip();
@@ -45,6 +46,14 @@ namespace Pinkman
             
             // jump
             Jump();
+        }
+
+        private void FixedUpdate()
+        {
+            // to transit animation between idle and run
+            myRb.velocity = new Vector2(horizontalInput * acceleration, myRb.velocity.y);
+            anim.SetFloat(Speed, Mathf.Abs(myRb.velocity.x));
+            anim.SetFloat(JumpSpeed, myRb.velocity.y);
         }
 
         void Move()
@@ -79,6 +88,7 @@ namespace Pinkman
             if (Input.GetButton("Jump") && secondaryJump && isGrounded)
             {
                 myRb.AddForce(new Vector2(0, secondaryJumpForce), ForceMode2D.Force); //while the jump button is held, add a force in the y direction
+                anim.SetBool(IsJumping, !isGrounded);
             }
         }
         
@@ -93,11 +103,13 @@ namespace Pinkman
         private void OnCollisionStay2D(Collision2D other)
         {
             isGrounded = true;
+            anim.SetBool(IsJumping, !isGrounded);
         }
 
         private void OnCollisionExit2D(Collision2D other)
         {
             isGrounded = false;
+            anim.SetBool(IsJumping, !isGrounded);
         }
     }
 }
