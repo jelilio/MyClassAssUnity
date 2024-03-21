@@ -20,7 +20,8 @@ namespace Pinkman
         public float secondaryJumpDelay;
 
         public bool secondaryJump;
-        private static readonly int Speed = Animator.StringToHash("speed");
+        private static readonly int Speed = Animator.StringToHash("xSpeed");
+        private static readonly int JumpSpeed = Animator.StringToHash("ySpeed");
         
         // Start is called before the first frame update
         void Start()
@@ -34,6 +35,7 @@ namespace Pinkman
         {
             // to transit animation between idle and run
             anim.SetFloat(Speed, Mathf.Abs(myRb.velocity.x));
+            anim.SetFloat(JumpSpeed, Mathf.Abs(myRb.velocity.y));
             
             // flip
             Flip();

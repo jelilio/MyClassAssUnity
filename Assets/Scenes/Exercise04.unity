@@ -7757,6 +7757,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6695985694553067851, guid: 3b82a2f2349154cbd9660e7e6820b3dd, type: 3}
+      propertyPath: m_UseOneWay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8040524560208239484, guid: 3b82a2f2349154cbd9660e7e6820b3dd, type: 3}
       propertyPath: m_Name
       value: Platform1 (2)
@@ -10366,7 +10370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2857407439631794181, guid: 73938b2d2604c46f2b15e08c6f41ba0d, type: 3}
       propertyPath: acceleration
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2857407439631794181, guid: 73938b2d2604c46f2b15e08c6f41ba0d, type: 3}
       propertyPath: secondaryJumpForce
