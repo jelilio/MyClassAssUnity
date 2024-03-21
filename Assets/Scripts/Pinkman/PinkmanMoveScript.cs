@@ -25,6 +25,7 @@ namespace Pinkman
         private static readonly int Speed = Animator.StringToHash("xSpeed");
         private static readonly int JumpSpeed = Animator.StringToHash("ySpeed");
         private static readonly int IsJumping = Animator.StringToHash("isJumping");
+        private static readonly int IsHurt = Animator.StringToHash("isHurt");
         
         // Start is called before the first frame update
         private void Start()
