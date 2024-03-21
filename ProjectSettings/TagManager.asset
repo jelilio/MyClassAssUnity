@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameManager
+  - Start
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
