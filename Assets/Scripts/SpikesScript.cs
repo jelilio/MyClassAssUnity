@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillZoneScript : MonoBehaviour
+public class SpikesScript : MonoBehaviour
 {
     public float damage;
     public GameManager gameManager;
@@ -19,18 +18,13 @@ public class KillZoneScript : MonoBehaviour
     {
         
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             gameManager.TakeDamage(damage);
-            gameManager.RespawnPlayer();
+            gameManager.ShakePlayer();
         }
-    }
-
-    private void Die()
-    {
-        
     }
 }

@@ -8,7 +8,7 @@ namespace Pinkman
 {
     public class PinkmanMoveScript : MonoBehaviour
     {
-        private float horizontalInput;
+        private float _horizontalInput;
         
         public float maxSpeed;
         public float acceleration;
@@ -37,7 +37,7 @@ namespace Pinkman
         // Update is called once per frame
         private void Update()
         {
-            horizontalInput = Input.GetAxis("Horizontal");
+            _horizontalInput = Input.GetAxis("Horizontal");
             
             // flip
             Flip();
@@ -52,7 +52,7 @@ namespace Pinkman
         private void FixedUpdate()
         {
             // to transit animation between idle and run
-            myRb.velocity = new Vector2(horizontalInput * acceleration, myRb.velocity.y);
+            myRb.velocity = new Vector2(_horizontalInput * acceleration, myRb.velocity.y);
             anim.SetFloat(Speed, Mathf.Abs(myRb.velocity.x));
             anim.SetFloat(JumpSpeed, myRb.velocity.y);
         }
