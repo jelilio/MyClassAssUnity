@@ -53,6 +53,17 @@ public class GameManager : MonoBehaviour
     {
         playerSpawnPoint = newSpawnPoint;
     }
+    
+    public void TakeDamage2(float damage)
+    {
+        StartCoroutine(TakeDamageAndWait(damage));
+    }
+    
+    private IEnumerator TakeDamageAndWait(float damage)
+    {
+        playerHealth -= damage;
+        yield return new WaitForSeconds(1.0f);
+    }
 
     public void RespawnPlayer()
     {
