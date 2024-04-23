@@ -532,6 +532,14 @@ PrefabInstance:
       value: Ground1Brown (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 64
       objectReference: {fileID: 0}
@@ -2081,6 +2089,14 @@ PrefabInstance:
     - target: {fileID: 4097124232495666733, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Name
       value: Ground1Brown (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -4784,11 +4800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Enabled
@@ -7906,6 +7922,14 @@ PrefabInstance:
     - target: {fileID: 4097124232495666733, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Name
       value: Ground1Brown (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.x
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
