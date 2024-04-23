@@ -97,5 +97,16 @@ namespace SMB
             velocity.y += gravity * multiplier * Time.deltaTime;
             velocity.y = Mathf.Max(velocity.y, gravity / 2f);
         }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+            {
+                if (transform.DotTest(collision.transform, Vector2.up))
+                {
+                    velocity.y = 0f;
+                }
+            }
+        }
     }
 }
