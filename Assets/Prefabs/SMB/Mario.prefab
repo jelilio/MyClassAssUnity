@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937874887413426745}
   - component: {fileID: 4155361640347697956}
+  - component: {fileID: 2343820592991808407}
   m_Layer: 3
   m_Name: Small
   m_TagString: Untagged
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2343820592991808407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375749660979155807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbe04feb220244b393289c1f0fdf5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idle: {fileID: 21300012, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  jump: {fileID: 21300022, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  slide: {fileID: 21300020, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  run: {fileID: 21300014, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
 --- !u!1 &2950037969267484102
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3921309493337379711}
   - component: {fileID: 7666021882192741639}
+  - component: {fileID: 5689973767997923359}
   m_Layer: 3
   m_Name: Big
   m_TagString: Untagged
@@ -281,3 +299,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5689973767997923359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591349530333116317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbe04feb220244b393289c1f0fdf5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idle: {fileID: 21300066, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  jump: {fileID: 21300076, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  slide: {fileID: 21300056, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}
+  run: {fileID: 21300068, guid: f1bde3f95d8d049e59a4208ea4358c51, type: 3}

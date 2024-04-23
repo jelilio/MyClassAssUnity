@@ -610,7 +610,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: small_mario_stop
+      name: small_mario_slide
       rect:
         serializedVersion: 2
         x: 331
@@ -988,7 +988,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: big_mario_stop
+      name: big_mario_slide
       rect:
         serializedVersion: 2
         x: 60
@@ -1618,7 +1618,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire_mario_stop
+      name: fire_mario_slide
       rect:
         serializedVersion: 2
         x: 52
@@ -2266,7 +2266,7 @@ TextureImporter:
       big_mario_run_1: 21300068
       big_mario_run_2: 21300070
       big_mario_run_3: 21300072
-      big_mario_stop: 21300056
+      big_mario_slide: 21300056
       big_mario_swim_1: 21300096
       big_mario_swim_2: 21300098
       big_mario_swim_3: 21300100
@@ -2281,8 +2281,8 @@ TextureImporter:
       fire_mario_run_1: 21300130
       fire_mario_run_2: 21300132
       fire_mario_run_3: 21300134
+      fire_mario_slide: 21300116
       fire_mario_stand: 21300128
-      fire_mario_stop: 21300116
       mario: 21300074
       mario_0: 21300000
       mario_1: 21300002
@@ -2341,7 +2341,7 @@ TextureImporter:
       small_mario_run_1: 21300014
       small_mario_run_2: 21300016
       small_mario_run_3: 21300018
-      small_mario_stop: 21300020
+      small_mario_slide: 21300020
       small_mario_swim_1: 21300040
       small_mario_swim_2: 21300042
       small_mario_swim_3: 21300044
