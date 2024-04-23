@@ -15,7 +15,7 @@ namespace SMB
         private void LateUpdate()
         {
             Vector3 cameraPosition = transform.position;
-            cameraPosition.x = _player.position.x;
+            cameraPosition.x = Math.Max(cameraPosition.x, _player.position.x); // prevent the camera from moving backward
             transform.position = cameraPosition;
         }
     }
