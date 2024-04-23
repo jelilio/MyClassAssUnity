@@ -2845,6 +2845,7 @@ GameObject:
   - component: {fileID: 645433492}
   - component: {fileID: 645433491}
   - component: {fileID: 645433490}
+  - component: {fileID: 645433493}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2926,6 +2927,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645433493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645433489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07db9d1a7525446dfb0be4af01093860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &656746099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4768,6 +4781,18 @@ PrefabInstance:
     - target: {fileID: 4097124232495666733, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_Name
       value: Ground1Brown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6406337884601120058, guid: 9c0fcbed8dad3480da7c2f9026e22426, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -8853,9 +8878,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mario
       objectReference: {fileID: 0}
-    - target: {fileID: 2950037969267484102, guid: b4fdc8ef65af5442d917653f5ae0d2a7, type: 3}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 4155361640347697956, guid: b4fdc8ef65af5442d917653f5ae0d2a7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666021882192741639, guid: b4fdc8ef65af5442d917653f5ae0d2a7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
