@@ -526,7 +526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: small_mario_stand
+      name: small_mario_idle
       rect:
         serializedVersion: 2
         x: 211
@@ -1093,7 +1093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: big_mario_stand
+      name: big_mario_idle
       rect:
         serializedVersion: 2
         x: 209
@@ -2250,7 +2250,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ae4deb75edef44e2baf791a3821d6977
     internalID: 0
     vertices: []
     indices: 
@@ -2261,11 +2261,11 @@ TextureImporter:
       big_mario_climb_1: 21300108
       big_mario_climb_2: 21300110
       big_mario_crouch: 21300078
+      big_mario_idle: 21300066
       big_mario_jump: 21300076
       big_mario_run_1: 21300068
       big_mario_run_2: 21300070
       big_mario_run_3: 21300072
-      big_mario_stand: 21300066
       big_mario_stop: 21300056
       big_mario_swim_1: 21300096
       big_mario_swim_2: 21300098
@@ -2336,11 +2336,11 @@ TextureImporter:
       small_mario_climb_1: 21300048
       small_mario_climb_2: 21300050
       small_mario_die: 21300026
+      small_mario_idle: 21300012
       small_mario_jump: 21300022
       small_mario_run_1: 21300014
       small_mario_run_2: 21300016
       small_mario_run_3: 21300018
-      small_mario_stand: 21300012
       small_mario_stop: 21300020
       small_mario_swim_1: 21300040
       small_mario_swim_2: 21300042
