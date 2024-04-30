@@ -9886,7 +9886,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_385
+      name: goomba_1
       rect:
         serializedVersion: 2
         x: 187
@@ -9907,7 +9907,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_386
+      name: goomba_2
       rect:
         serializedVersion: 2
         x: 208
@@ -10180,7 +10180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_399
+      name: goomba_3
       rect:
         serializedVersion: 2
         x: 228
@@ -13496,6 +13496,9 @@ TextureImporter:
       goal_flag_green: 21300088
       goal_pole_green: 21300018
       goal_top_green: 21301100
+      goomba_1: 21300770
+      goomba_2: 21300772
+      goomba_3: 21300798
       ground1_brown: 21300136
       ground1_green: 21300138
       ground1_grey: 21300142
@@ -13768,8 +13771,6 @@ TextureImporter:
       misc-3_379: 21300758
       misc-3_38: 21300076
       misc-3_380: 21300760
-      misc-3_385: 21300770
-      misc-3_386: 21300772
       misc-3_387: 21300774
       misc-3_388: 21300776
       misc-3_389: 21300778
@@ -13783,7 +13784,6 @@ TextureImporter:
       misc-3_396: 21300792
       misc-3_397: 21300794
       misc-3_398: 21300796
-      misc-3_399: 21300798
       misc-3_4: 21301104
       misc-3_40: 21300080
       misc-3_400: 21300800
