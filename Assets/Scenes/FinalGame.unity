@@ -7991,6 +7991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a72bfcdd31ab4a38a51f8312c041b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSound: {fileID: 1209763658}
+  stageClear: {fileID: 8300000, guid: 5acbac490a36140149f63fb0d2be03e4, type: 3}
 --- !u!4 &1462883127
 Transform:
   m_ObjectHideFlags: 0
@@ -10091,7 +10093,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7779502177839710615, guid: ffed506997e0b42679b7be454f8c813f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1969727759}
   m_SourcePrefab: {fileID: 100100000, guid: ffed506997e0b42679b7be454f8c813f, type: 3}
 --- !u!4 &1797087948 stripped
 Transform:
@@ -10880,6 +10885,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4729178106465580971, guid: 6e2ae52d2dd294701b3a50e999e02ab5, type: 3}
   m_PrefabInstance: {fileID: 1968438536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1969727757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779502177839710615, guid: ffed506997e0b42679b7be454f8c813f, type: 3}
+  m_PrefabInstance: {fileID: 1797087947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1969727759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969727757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c454cac4e904e91871b4267131930c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1995724728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11461,6 +11483,10 @@ PrefabInstance:
       propertyPath: playSound
       value: 
       objectReference: {fileID: 1209763658}
+    - target: {fileID: -7782649617719866403, guid: b4fdc8ef65af5442d917653f5ae0d2a7, type: 3}
+      propertyPath: stageClear
+      value: 
+      objectReference: {fileID: 8300000, guid: 5acbac490a36140149f63fb0d2be03e4, type: 3}
     - target: {fileID: 1217674750590058410, guid: b4fdc8ef65af5442d917653f5ae0d2a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
