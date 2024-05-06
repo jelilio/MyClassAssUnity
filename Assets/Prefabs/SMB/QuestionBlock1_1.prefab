@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5200891149576980287}
   - component: {fileID: 1003273071802201771}
   - component: {fileID: 3730353486458745411}
+  - component: {fileID: 2152131423692009221}
+  - component: {fileID: 7497148807815211498}
   m_Layer: 0
   m_Name: QuestionBlock1_1
   m_TagString: Untagged
@@ -130,3 +132,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2152131423692009221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641759484376478945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a818ab9fbd0477e9a355f498213e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  emptyBlock: {fileID: 21300060, guid: 82bc45c4496284f4c823d1b837f65ec4, type: 3}
+  maxHits: 1
+--- !u!114 &7497148807815211498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641759484376478945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be756f71d70504ff8bd03ff7b1282ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300160, guid: 82bc45c4496284f4c823d1b837f65ec4, type: 3}
+  - {fileID: 21300162, guid: 82bc45c4496284f4c823d1b837f65ec4, type: 3}
+  framerate: 0.2

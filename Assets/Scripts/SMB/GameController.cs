@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +7,14 @@ namespace SMB
     {
         public static GameController Instance { get; private set; }
 
+        public AudioSource playSound;
+        public AudioClip stageClear;
+    
         public int world { get; private set;  }
         public int stage { get; private set;  }
         public int lives { get; private set;  }
-        
+        public int coins { get; private set; }
+
         private void Awake()
         {
             if (Instance != null)
@@ -41,6 +44,8 @@ namespace SMB
         private void NewGame()
         {
             lives = 3;
+            coins = 0;
+            
             
             LoadLevel(1, 1);
         }
@@ -61,6 +66,7 @@ namespace SMB
         public void ResetLevel()
         {
             lives--;
+            
 
             if (lives > 0)
             {
@@ -80,6 +86,22 @@ namespace SMB
         private void GameOver()
         {
             Invoke(nameof(NewGame), 3f);
+        }
+        
+        public void AddCoin()
+        {
+            coins++;
+
+            if (coins == 100)
+            {
+                coins = 0;
+                AddLife();
+            }
+        }
+        
+        public void AddLife()
+        {
+            lives++;
         }
     }
 }

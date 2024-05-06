@@ -9,7 +9,11 @@ namespace SMB
             if (other.CompareTag("Player"))
             {
                 other.gameObject.SetActive(false);
-                GameController.Instance.ResetLevel(3f);
+                
+                Player player = other.GetComponent<Player>();
+                player.Death();
+                
+                // GameController.Instance.ResetLevel(3f);
             }
             else
             {

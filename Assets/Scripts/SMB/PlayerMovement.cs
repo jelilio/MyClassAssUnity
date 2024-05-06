@@ -24,6 +24,9 @@ namespace SMB
         public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
         public bool falling => velocity.y < 0f && !grounded;
         
+        public AudioSource playSound;
+        public AudioClip marioJump;
+        
         private void Awake()
         {
             camera = Camera.main;
@@ -100,6 +103,8 @@ namespace SMB
             {
                 velocity.y = jumpForce;
                 jumping = true;
+                
+                playSound.PlayOneShot(marioJump);
             }
         }
 

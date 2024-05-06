@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5893264594147674911}
   - component: {fileID: 7654916074905575457}
   - component: {fileID: 5754369405930278251}
+  - component: {fileID: 6361561354825676587}
   m_Layer: 0
   m_Name: QuestionBlock2_1
   m_TagString: Untagged
@@ -130,3 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6361561354825676587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958573581401688021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a818ab9fbd0477e9a355f498213e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  emptyBlock: {fileID: 0}
+  maxHits: -1

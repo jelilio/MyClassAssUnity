@@ -9,6 +9,10 @@ namespace SMB
         public PlayerSpriteRenderer bigRenderer;
         private PlayerSpriteRenderer activeRenderer;
 
+        public AudioSource playSound;
+        public AudioClip marioDie;
+        public AudioClip stageClear;
+
         public CapsuleCollider2D capsuleCollider { get; private set; }
         public DeathAnimation deathAnimation { get; private set; }
 
@@ -44,8 +48,17 @@ namespace SMB
             smallRenderer.enabled = false;
             bigRenderer.enabled = false;
             deathAnimation.enabled = true;
+            playSound.Stop();
+            playSound.PlayOneShot(marioDie);
 
             GameController.Instance.ResetLevel(3f);
+        }
+        
+        public void StageClear()
+        {
+            playSound.Stop();
+            playSound.PlayOneShot(stageClear);
+            // ResetLevel(5f);
         }
 
         private IEnumerator StarpowerAnimation()

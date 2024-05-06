@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3535891010650324765}
   - component: {fileID: 4006285879915816247}
   - component: {fileID: 3794773820594833648}
+  - component: {fileID: -8312902562035086983}
   m_Layer: 0
   m_Name: BrickBrown1
   m_TagString: Untagged
@@ -130,3 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8312902562035086983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3215485573272812592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a818ab9fbd0477e9a355f498213e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  emptyBlock: {fileID: 0}
+  maxHits: -1
