@@ -10,7 +10,7 @@ namespace SMB
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                // Player player = collision.gameObject.GetComponent<Player>();
+                Player player = collision.gameObject.GetComponent<Player>();
 
                 /*
                 if (player.starpower) {
@@ -23,6 +23,10 @@ namespace SMB
                 
                 if (collision.transform.DotTest(transform, Vector2.down)) {
                     Flatten();
+                }
+                else
+                {
+                    player.Hit();
                 }
             }
         }
@@ -46,7 +50,7 @@ namespace SMB
         private void Hit()
         {
             GetComponent<AnimatedSprite>().enabled = false;
-            // GetComponent<DeathAnimation>().enabled = true;
+            GetComponent<DeathAnimation>().enabled = true;
             Destroy(gameObject, 3f);
         }
 

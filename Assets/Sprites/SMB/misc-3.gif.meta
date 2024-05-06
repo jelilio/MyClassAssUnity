@@ -9487,7 +9487,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_366
+      name: koopa_1
       rect:
         serializedVersion: 2
         x: 451
@@ -9508,7 +9508,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_367
+      name: koopa_2
       rect:
         serializedVersion: 2
         x: 481
@@ -9529,13 +9529,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_368
+      name: koopa_shell_1
       rect:
         serializedVersion: 2
         x: 510
         y: 413
         width: 16
-        height: 15
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -9550,13 +9550,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: misc-3_369
+      name: koopa_shell_2
       rect:
         serializedVersion: 2
         x: 540
         y: 413
         width: 16
-        height: 14
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -13511,6 +13511,10 @@ TextureImporter:
       hud_coin3_1: 21300200
       hud_coin3_2: 21300202
       hud_coin3_3: 21300204
+      koopa_1: 21300732
+      koopa_2: 21300734
+      koopa_shell_1: 21300736
+      koopa_shell_2: 21300738
       lava_mid: 21300378
       lava_top: 21300368
       marble_brown: 21300134
@@ -13754,10 +13758,6 @@ TextureImporter:
       misc-3_363: 21300726
       misc-3_364: 21300728
       misc-3_365: 21300730
-      misc-3_366: 21300732
-      misc-3_367: 21300734
-      misc-3_368: 21300736
-      misc-3_369: 21300738
       misc-3_37: 21300074
       misc-3_370: 21300740
       misc-3_371: 21300742

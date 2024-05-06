@@ -40,6 +40,7 @@ namespace SMB
         private void OnDisable()
         {
             spriteRenderer.enabled = false;
+            run.enabled = false;
         }
     }
 }
