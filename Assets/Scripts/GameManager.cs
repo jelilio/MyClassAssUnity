@@ -85,12 +85,12 @@ public class GameManager : MonoBehaviour
         _player.transform.position = playerSpawnPoint.position;
         _playerAnim.transform.localScale = new Vector3(1, 1, 1);
         _playerRb.simulated = true;
-        _playerAnim.Play("hurt");
+        _playerAnim.Play("NinjaHurt");
     }
     
     private IEnumerator ShakePlayer(float duration)
     {
         yield return new WaitForSeconds(duration);
-        _playerAnim.Play("hurt");
+        _playerAnim.Play("NinjaHurt");
     }
 }
