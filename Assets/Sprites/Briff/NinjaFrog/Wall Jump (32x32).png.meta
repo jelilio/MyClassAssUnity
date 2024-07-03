@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40a16123f26244b81a9318f9d8844679
+guid: 77eedc770b29e49f79baa6687bdc0ce3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,64 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Extra_plants (16 x 16)_0
+      name: Wall Jump (32x32)_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 24
-        width: 46
-        height: 40
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c083cb2c6e2af459ba964de715e0f953
-      internalID: -24934636
+      spriteID: 6fd854ac9b29f44c890f57a8c29d238d
+      internalID: -767732341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Extra_plants (16 x 16)_1
+      name: Wall Jump (32x32)_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 16
-        width: 50
-        height: 18
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66de281a44c0d494ab83b73c744648a1
-      internalID: -661890625
+      spriteID: 9dfeb673de0ed4aa7bd405a893636369
+      internalID: 1528064586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Extra_plants (16 x 16)_2
+      name: Wall Jump (32x32)_2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 16
-        width: 46
-        height: 8
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98fd3c5aaf64f4f34b3355f422177391
-      internalID: -291001175
+      spriteID: 5f38f01bdecb34affbfff24569f73f67
+      internalID: 1411924641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Jump (32x32)_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a296da1168664b2e84f3d7d31ff08b1
+      internalID: -1324416774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Jump (32x32)_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1def2f774a0634397b573b2cbafd2feb
+      internalID: -2049749119
       vertices: []
       indices: 
       edges: []
@@ -175,7 +217,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2b4a9841d83834153bf73b8e0e755d28
+    spriteID: 0d255715da4644bf6bdc468d3613c36d
     internalID: 0
     vertices: []
     indices: 
@@ -183,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Extra_plants (16 x 16)_0: -24934636
-      Extra_plants (16 x 16)_1: -661890625
-      Extra_plants (16 x 16)_2: 1717884771
+      Wall Jump (32x32)_0: -767732341
+      Wall Jump (32x32)_1: 1528064586
+      Wall Jump (32x32)_2: 1411924641
+      Wall Jump (32x32)_3: -1324416774
+      Wall Jump (32x32)_4: -2049749119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
