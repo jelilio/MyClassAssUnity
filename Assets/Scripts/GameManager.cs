@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,18 +10,44 @@ public class GameManager : MonoBehaviour
     public float playerHealth;
     public float maxPlayerHealth;
     public float playerScore;
+    public float maxScoreToHealth;
     
     private GameObject _player;
     private Rigidbody2D _playerRb;
     private Animator _playerAnim;
     private SpriteRenderer _playerCharacter;
+    public GameObject gameOverScreen;
+    
+    public static GameManager Instance { get; private set; }
     
     private static readonly int IsHurt = Animator.StringToHash("isHurt");
     
-    private void Awake()
+    /*private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+    }*/
+    
+    /*
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }*/
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +69,28 @@ public class GameManager : MonoBehaviour
     public void AddScore(float score)
     {
         playerScore += score;
+
+        if (Mathf.Approximately(playerScore, maxScoreToHealth))
+        {
+            playerScore = 0.0f;
+            IncreaseHealth(1.0f);
+        }
     }
 
     public void TakeDamage(float damage)
     {
         playerHealth -= damage;
+
+        if (playerHealth <= 0.0f)
+        {
+            playerHealth = 0.0f;
+            GameOver();
+        }
+    }
+    
+    private void IncreaseHealth(float health)
+    {
+        playerHealth += health;
     }
 
     public void UpdateSpawnPoint(Transform newSpawnPoint)
@@ -61,7 +105,8 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator TakeDamageAndWait(float damage)
     {
-        playerHealth -= damage;
+        // playerHealth -= damage;
+        TakeDamage(damage);
         yield return new WaitForSeconds(1.0f);
     }
 
@@ -85,7 +130,9 @@ public class GameManager : MonoBehaviour
         _player.transform.position = playerSpawnPoint.position;
         _playerAnim.transform.localScale = new Vector3(1, 1, 1);
         _playerRb.simulated = true;
-        _playerAnim.Play("NinjaHurt");
+        
+        if(_player.activeSelf) 
+            _playerAnim.Play("NinjaHurt");
     }
     
     private IEnumerator ShakePlayer(float duration)
@@ -93,4 +140,22 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(duration);
         _playerAnim.Play("NinjaHurt");
     }
+    
+    public void ResetGame()
+    {
+        _player.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    public void RestartGame()
+    {
+        Invoke(nameof(ResetGame), 1f);
+    }
+
+    private void GameOver()
+    { 
+        _player.SetActive(false);
+        gameOverScreen.SetActive(true);
+    }
+
 }
