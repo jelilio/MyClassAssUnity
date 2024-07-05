@@ -6,3 +6,10 @@ https://www.hiclipart.com/free-transparent-background-png-clipart-hhwfi
 
 Texture:
 https://ambientcg.com/view?id=Grass001
+
+FinalGame:
+Tilesets:
+https://grafxkid.itch.io/seasonal-tilesets
+
+Player, Enemy & Pickups:
+https://pixelfrog-assets.itch.io/pixel-adventure-2
