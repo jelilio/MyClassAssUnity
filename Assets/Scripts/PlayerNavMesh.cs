@@ -26,7 +26,7 @@ public class PlayerNavMesh : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                GetComponent<UnityEngine.AI.NavMeshAgent>().destination = hit.point;
+                GetComponent<NavMeshAgent>().destination = hit.point;
             }
         }
     }
