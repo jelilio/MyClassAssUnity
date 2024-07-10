@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     private static readonly int Velocity = Animator.StringToHash("velocity");
 
     private bool aggro;
+    
     public Transform[] patrolPoints;
     public bool destinationReached;
     
@@ -21,6 +22,9 @@ public class EnemyController : MonoBehaviour
     
     public float patrolSpeed;
     public float aggroSpeed;
+    public float aggroTimer;
+
+    public bool chasing;
     
     void Start()
     {
@@ -46,7 +50,7 @@ public class EnemyController : MonoBehaviour
             _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Length)].position;
         }
         
-        if (aggro == true)
+        if (aggro == true && chasing == true)
         {
             _navMeshAgent.speed = aggroSpeed;
             // Move towards the player using navmesh
@@ -60,5 +64,36 @@ public class EnemyController : MonoBehaviour
         }
         
         // _navMeshAgent.destination = player.position;
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StopCoroutine("ChaseCooldown");
+            aggro = true;
+            chasing = true;
+            _navMeshAgent.speed = aggroSpeed;
+            
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        
+        if (other.CompareTag("Player"))
+        {
+            _navMeshAgent.destination = player.position; //this is the last seen player position (since OnTriggerExit only runs once)
+            chasing = false;
+            StopCoroutine("ChaseCooldown");
+            StartCoroutine("ChaseCooldown");
+        }
+    }
+    
+    IEnumerator ChaseCooldown()
+    {
+        yield return new WaitForSeconds(aggroTimer);
+        aggro = false;
+        destinationReached = true;
     }
 }
