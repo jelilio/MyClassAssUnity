@@ -7,9 +7,16 @@ https://www.hiclipart.com/free-transparent-background-png-clipart-hhwfi
 Texture:
 https://ambientcg.com/view?id=Grass001
 
-FinalGame:
-Tilesets:
-https://grafxkid.itch.io/seasonal-tilesets
+FinalGame-2D:
+  Tilesets:
+  https://grafxkid.itch.io/seasonal-tilesets
 
-Player, Enemy & Pickups:
-https://pixelfrog-assets.itch.io/pixel-adventure-2
+  Player, Enemy & Pickups:
+  https://pixelfrog-assets.itch.io/pixel-adventure-2
+
+FinalGame:
+  Textures:
+  https://www.freepik.com/free-photo/close-up-ground-texture-detail_23670142.htm#query=dirt%20texture&position=4&from_view=keyword&track=ais_hybrid&uuid=5bb6d0c1-2130-4d12-8338-734d52ed9bc1
+
+  Player:
+  https://www.mixamo.com/#/?page=1&query=idle&type=Motion%2CMotionPack

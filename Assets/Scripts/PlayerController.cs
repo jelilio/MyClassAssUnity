@@ -6,12 +6,14 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public float velocity;
+    public Animator playerAnim;
     
     private NavMeshAgent _navMeshAgent;
     private Camera _camera;
+    private static readonly int Velocity = Animator.StringToHash("velocity");
 
     // Start is called before the first frame update
-    private void Awake()
+    void Start()
     {
         _camera = Camera.main;
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         velocity = _navMeshAgent.velocity.magnitude;
-        // playerAnim.SetFloat("speed", velocity);
+        playerAnim.SetFloat(Velocity, velocity);
         
         if (Input.GetMouseButtonDown(0))
         {
