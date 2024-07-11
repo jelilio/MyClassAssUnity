@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyCatchPlayer : MonoBehaviour
 {
     public Game3DManager gameManager;
+    public float aggroTimer;
     
     // Start is called before the first frame update
     void Start()
@@ -23,13 +24,7 @@ public class EnemyCatchPlayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player collide with enemy capsule");
             gameManager.IncrementCatch();
         }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        
     }
 }

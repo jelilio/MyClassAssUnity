@@ -93,7 +93,6 @@ public class EnemyController : MonoBehaviour
         {
             _navMeshAgent.destination = player.position; //this is the last seen player position (since OnTriggerExit only runs once)
             chasing = false;
-            gameManager.IncrementEscape();
             StopCoroutine(nameof(ChaseCooldown));
             StartCoroutine(nameof(ChaseCooldown));
         }
@@ -103,6 +102,7 @@ public class EnemyController : MonoBehaviour
     {
         yield return new WaitForSeconds(aggroTimer);
         notification.SetActive(false);
+        gameManager.IncrementEscape();
         _aggro = false;
         destinationReached = true;
     }

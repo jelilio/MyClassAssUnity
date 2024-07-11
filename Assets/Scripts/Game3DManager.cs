@@ -40,6 +40,7 @@ public class Game3DManager : MonoBehaviour
     public void IncrementCatch()
     {
         catches += 1;
+        escapes -= 1;
         RespawnPlayer();
     }
     
