@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class EnemyController : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class EnemyController : MonoBehaviour
     public float velocity;
     private static readonly int Velocity = Animator.StringToHash("velocity");
 
-    private bool aggro;
+    private bool _aggro;
     
     public Transform[] patrolPoints;
     public bool destinationReached;
@@ -25,13 +27,17 @@ public class EnemyController : MonoBehaviour
     public float aggroTimer;
 
     public bool chasing;
+    public GameObject notification;
+
+    public CapsuleCollider capsule;
     
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player").transform;
-        aggro = false;
+        _aggro = false;
         destinationReached = true;
+        notification.SetActive(false);
     }
 
     // Update is called once per frame
@@ -42,7 +48,7 @@ public class EnemyController : MonoBehaviour
         // Set the speed of the animator to the velocity of the enemy
         enemyAnim.SetFloat(Velocity, velocity);
         
-        if (aggro == false && destinationReached == true)
+        if (_aggro == false && destinationReached == true)
         {
             _navMeshAgent.speed = patrolSpeed;
             destinationReached = false;
@@ -50,7 +56,7 @@ public class EnemyController : MonoBehaviour
             _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Length)].position;
         }
         
-        if (aggro == true && chasing == true)
+        if (_aggro && chasing)
         {
             _navMeshAgent.speed = aggroSpeed;
             // Move towards the player using navmesh
@@ -65,35 +71,36 @@ public class EnemyController : MonoBehaviour
         
         // _navMeshAgent.destination = player.position;
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Player"))
         {
-            StopCoroutine("ChaseCooldown");
-            aggro = true;
+            StopCoroutine(nameof(ChaseCooldown));
+            _aggro = true;
             chasing = true;
             _navMeshAgent.speed = aggroSpeed;
-            
+            notification.SetActive(true);
         }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        
         if (other.CompareTag("Player"))
         {
             _navMeshAgent.destination = player.position; //this is the last seen player position (since OnTriggerExit only runs once)
             chasing = false;
-            StopCoroutine("ChaseCooldown");
-            StartCoroutine("ChaseCooldown");
+            StopCoroutine(nameof(ChaseCooldown));
+            StartCoroutine(nameof(ChaseCooldown));
         }
     }
     
     IEnumerator ChaseCooldown()
     {
         yield return new WaitForSeconds(aggroTimer);
-        aggro = false;
+        notification.SetActive(false);
+        _aggro = false;
         destinationReached = true;
     }
 }
