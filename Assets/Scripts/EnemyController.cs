@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
     public GameObject notification;
 
     public CapsuleCollider capsule;
+    public Game3DManager gameManager;
     
     void Start()
     {
@@ -38,6 +39,7 @@ public class EnemyController : MonoBehaviour
         _aggro = false;
         destinationReached = true;
         notification.SetActive(false);
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<Game3DManager>();
     }
 
     // Update is called once per frame
@@ -91,6 +93,7 @@ public class EnemyController : MonoBehaviour
         {
             _navMeshAgent.destination = player.position; //this is the last seen player position (since OnTriggerExit only runs once)
             chasing = false;
+            gameManager.IncrementEscape();
             StopCoroutine(nameof(ChaseCooldown));
             StartCoroutine(nameof(ChaseCooldown));
         }
