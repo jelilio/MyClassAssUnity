@@ -18,5 +18,8 @@ FinalGame:
   Textures:
   https://www.freepik.com/free-photo/close-up-ground-texture-detail_23670142.htm#query=dirt%20texture&position=4&from_view=keyword&track=ais_hybrid&uuid=5bb6d0c1-2130-4d12-8338-734d52ed9bc1
 
-  Player:
+  Player & Enemy:
   https://www.mixamo.com/#/?page=1&query=idle&type=Motion%2CMotionPack
+
+  Exclamation Bubble:
+  https://sketchfab.com/3d-models/exclamation-bubble-be2b3451fc2f401298396c67ea81c640

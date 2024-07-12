@@ -24,7 +24,7 @@ public class EnemyCatchPlayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManager.IncrementCatch();
+            gameManager.TakeDamage();
         }
     }
 }

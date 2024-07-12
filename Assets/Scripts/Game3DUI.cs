@@ -20,6 +20,6 @@ public class Game3Dui : MonoBehaviour
     void Update()
     {
         escapesText.text = "Escapes: " + gameManager.escapes;
-        catchesText.text = "Catches: " + gameManager.catches;
+        catchesText.text = "Health: " + gameManager.playerHealth;
     }
 }
